@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: linear-gradient(135deg, #ff9a9e 10%, #F6416C 100%);
+    height: 100vh;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+ 
+}
+
+body::before,
+body::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%; 
+    opacity: 0.5; 
+}
+
+body::before{
+    clip-path: circle(30% at left 20%);
+  background: linear-gradient(135deg, #F6416C 10%, #ff9a9e 100%);
+
+}
+body::after{
+    clip-path: circle(25% at right 80%);
+    background: linear-gradient(135deg, #F6416C 10%, #ff9a9e 100%);
+}
+
+.quote-box{
+    background: #ff9a9e ;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.quote-box h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.quote-box h2::after{
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: #F6416C;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.quote-box blockquote{
+    font-size: 26px;
+    font-weight: 500;
+    min-height: 110px;
+}
+
+.quote-box blockquote::before, .quote-box blockquote::after{
+    content: '"';
+}
+
+.quote-box span{
+    display: block;
+    margin-top: 10px;
+    float: right;
+    font-size: 18px;
+    position: relative;
+}
+
+.quote-box span::before{
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #F6416C;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.quote-box button{
+    background: #F6416C ;
+    width: 150px;
+    height: 50px;
+    color: white;
+    align-items: center;
+    border: none;
+    margin: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.quote-box button:nth-child(2){
+    background: transparent;
+    color: white;
+    border: 1px solid #F6416C;
+
+}
+
+.fa-twitter{
+  color: blue;
+  padding-right: 14px;
+}
+
+
+
+@media (max-width: 500px) {
+    .quote-box{
+        width: 300px;
+    }
+
+    .quote-box h2{
+        font-size: 29px;
+    }
+}
